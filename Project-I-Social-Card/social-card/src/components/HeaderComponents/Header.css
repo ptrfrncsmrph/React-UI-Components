@@ -1,1 +1,13 @@
 /* All styles for your header Components live here */
+
+header {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: var(--thumb-width) 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+img {
+  max-width: 100%;
+  grid-row: 1 / -1;
+}

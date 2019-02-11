@@ -1,1 +1,15 @@
 /* All styles for your Card Components live here */
+
+.card-container {
+  display: grid;
+  grid-template-columns: var(--thumb-width) 1fr;
+  max-width: var(--max-width);
+}
+
+section {
+  grid-column: 2 / 3;
+}
+
+section img {
+  max-width: 100%;
+}
