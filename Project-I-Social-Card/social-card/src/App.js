@@ -5,11 +5,11 @@ import HeaderContainer from "./components/HeaderComponents/HeaderContainer"
 import Footer from "./components/FooterComponents/Footer"
 
 const App = () => (
-  <Fragment>
+  <div className="container">
     <HeaderContainer />
     <CardContainer />
     <Footer />
-  </Fragment>
+  </div>
 )
 
 export default App

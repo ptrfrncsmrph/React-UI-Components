@@ -4,6 +4,38 @@
 */
 
 :root {
-  --thumb-width: 100px;
+  --thumb-width: 80px;
   --max-width: 600px;
+}
+
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: var(--thumb-width) 1fr;
+  max-width: var(--max-width);
+}
+
+.container > * {
+  grid-column-start: 2;
+}
+
+img {
+  max-width: 100%;
+}
+
+div.lambda-logo {
+  display: flex;
+  height: var(--thumb-width);
+  border-radius: 5rem;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 1;
+  position: relative;
+  background-color: #c01;
+}
+
+div.lambda-logo img {
+  padding-top: 0.5rem;
+  max-width: 60%;
+  filter: grayscale(100%) contrast(200%) invert(100%);
 }

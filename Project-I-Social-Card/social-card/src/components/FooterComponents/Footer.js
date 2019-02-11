@@ -8,11 +8,9 @@ import envelope from "../../assets/envelope-regular.svg"
 
 export default () => (
   <footer>
-    <div>
-      <img src={comment} />
-      <img src={retweet} />
-      <img src={heart} />
-      <img src={envelope} />
-    </div>
+    <img src={comment} />
+    <img src={retweet} />
+    <img src={heart} />
+    <img src={envelope} />
   </footer>
 )

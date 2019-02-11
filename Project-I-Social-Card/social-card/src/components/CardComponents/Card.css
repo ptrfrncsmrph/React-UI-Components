@@ -1,19 +1,18 @@
 /* All styles for your Card Components live here */
 
-.card-container {
-  display: grid;
-  grid-template-columns: var(--thumb-width) 1fr;
-  max-width: var(--max-width);
-}
-
-section {
-  grid-column: 2 / 3;
-}
-
-section img {
-  max-width: 100%;
-}
-
 h3 {
   font-size: 1rem;
+}
+
+.card-container {
+  border: 1px solid lightgray;
+}
+
+.card-container .content {
+  padding: 1rem;
+}
+
+.card-container .content h3,
+.card-container .content p {
+  margin: 0.5rem 0;
 }
