@@ -7,6 +7,9 @@
   font-size: 16px;
   --thumb-width: 3.6rem;
   --max-width: 40rem;
+
+  --lightgray: lightgray;
+  --gray: gray;
 }
 
 .container {
