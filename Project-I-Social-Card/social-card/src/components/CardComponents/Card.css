@@ -5,6 +5,9 @@ h3 {
 }
 
 .card-container {
+  display: block;
+  text-decoration: none;
+  color: black;
   border: 1px solid var(--lightgray);
   border-radius: 0.5rem;
   overflow: hidden;

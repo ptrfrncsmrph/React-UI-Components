@@ -4,8 +4,8 @@ import CardBanner from "./CardBanner"
 import CardContent from "./CardContent"
 
 export default () => (
-  <div className="card-container">
+  <a href="https://www.reactjs.org" className="card-container">
     <CardBanner src="https://tk-assets.lambdaschool.com/fcd75197-7d12-46ec-bc9e-4130f34822fa_reactbackground.png" />
     <CardContent />
-  </div>
+  </a>
 )

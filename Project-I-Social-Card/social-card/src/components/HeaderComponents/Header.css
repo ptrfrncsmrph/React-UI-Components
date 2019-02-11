@@ -17,3 +17,8 @@ header p {
 .header-title span {
   color: var(--gray);
 }
+
+.header-title span+span::before {
+  content: "\00B7";
+  margin-right: 0.5rem;
+}
