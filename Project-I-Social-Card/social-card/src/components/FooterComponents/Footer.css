@@ -1,11 +1,17 @@
 footer {
-  width: 60%;
   margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
 }
 
 footer img {
   display: inline-block;
   height: 1.25rem;
+}
+
+.icon {
+  width: 5rem;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  grid-gap: 0.5rem;
+  align-items: center;
 }
