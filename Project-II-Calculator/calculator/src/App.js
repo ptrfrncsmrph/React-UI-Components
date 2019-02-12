@@ -27,14 +27,14 @@ const App = () => {
       <ClearButton />
       <div className="operations">
         {operations.map(op => (
-          <OperationButton style="operation-button" {...op} />
+          <OperationButton styleName="operation-button" {...op} />
         ))}
       </div>
       <div className="numbers">
         {range(0, 9)
           .reverse()
           .map(n => (
-            <NumberButton style="number-button" number={n} />
+            <NumberButton styleName="number-button" number={n} />
           ))}
       </div>
     </div>
