@@ -1,23 +1,41 @@
-import React from 'react';
-import './App.css';
+import React from "react"
+import CalculatorDisplay from "./components/DisplayComponents/CalculatorDisplay"
+import NumberButton from "./components/ButtonComponents/NumberButton"
+import OperationButton from "./components/ButtonComponents/OperationButton"
+import ClearButton from "./components/ButtonComponents/ClearButton"
+
+import { range } from "./lib"
+
+import "./App.css"
+
+// Just declaring these here and leaving them as undefined
+// I think I'll want to represent each as a type later
+let Add, Sub, Mul, Div, Eq
+
+const Operation = (type, sym) => ({ type, sym })
+const AddOp = Operation(Add, "+")
+const SubOp = Operation(Sub, "-")
+const MulOp = Operation(Mul, "*")
+const DivOp = Operation(Div, "/")
+const operations = [AddOp, SubOp, MulOp, DivOp]
 
 const App = () => {
   return (
-    <div>
-      <h3>Welcome to React Calculator</h3>
-      <p>
-        We have given you a starter project. You'll want to build out your
-        components in their respective files, remove this code and replace it
-        with the proper components.
-      </p>
-      <p>
-        <strong>
-          Don't forget to `default export` your components and import them here
-          inside of this file in order to make them work.
-        </strong>
-      </p>
+    <div className="grid-container">
+      <CalculatorDisplay buffer={0} />
+      <ClearButton />
+      <div className="operations">
+        {operations.map(op => (
+          <OperationButton {...op} />
+        ))}
+      </div>
+      <div className="numbers">
+        {range(0, 9).map(n => (
+          <NumberButton number={n} />
+        ))}
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
