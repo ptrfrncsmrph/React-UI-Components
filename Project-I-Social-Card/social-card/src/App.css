@@ -2,3 +2,45 @@
   Write your styles/CSS for App.js here and import into the component that you need 
   IF you'd like to attempt to use less you'll have to research how to do this with Create React App
 */
+
+:root {
+  font-size: 16px;
+  --thumb-width: 3.6rem;
+  --max-width: 40rem;
+
+  --lightgray: lightgray;
+  --gray: gray;
+}
+
+.container {
+  margin: 0.5rem 0.25rem;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: var(--thumb-width) 1fr;
+  max-width: var(--max-width);
+}
+
+.container > * {
+  grid-column-start: 2;
+}
+
+img {
+  max-width: 100%;
+}
+
+div.lambda-logo {
+  display: flex;
+  height: var(--thumb-width);
+  border-radius: 5rem;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 1;
+  position: relative;
+  background-color: #c01;
+}
+
+div.lambda-logo img {
+  padding-top: 8%;
+  max-width: 60%;
+  filter: grayscale(100%) contrast(200%) invert(100%);
+}

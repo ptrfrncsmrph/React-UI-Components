@@ -1,1 +1,23 @@
 /* All styles for your Card Components live here */
+
+h3 {
+  font-size: 1rem;
+}
+
+.card-container {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid var(--lightgray);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card-container .content {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.card-container .content h3,
+.card-container .content p {
+  margin: 0.5rem 0;
+}

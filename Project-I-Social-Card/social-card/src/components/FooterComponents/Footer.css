@@ -1,0 +1,11 @@
+footer {
+  width: 60%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer img {
+  display: inline-block;
+  height: 1.25rem;
+}
