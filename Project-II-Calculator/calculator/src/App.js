@@ -17,7 +17,8 @@ const AddOp = Operation(Add, "+")
 const SubOp = Operation(Sub, "-")
 const MulOp = Operation(Mul, "*")
 const DivOp = Operation(Div, "/")
-const operations = [AddOp, SubOp, MulOp, DivOp]
+const EqOp = Operation(Eq, "=")
+const operations = [AddOp, SubOp, MulOp, DivOp, EqOp]
 
 const App = () => {
   return (
@@ -30,9 +31,11 @@ const App = () => {
         ))}
       </div>
       <div className="numbers">
-        {range(0, 9).map(n => (
-          <NumberButton number={n} />
-        ))}
+        {range(0, 9)
+          .reverse()
+          .map(n => (
+            <NumberButton number={n} />
+          ))}
       </div>
     </div>
   )
