@@ -12,7 +12,6 @@ import "./App.css"
 
 // Just declaring these here and leaving them as undefined
 // I think I'll want to represent each as a type later
-// let Add, Sub, Mul, Div, Eq
 let Eq
 
 const Operation = (type, sym) => ({ type, sym })
@@ -28,12 +27,18 @@ class App extends Component {
     buffer: "0",
     computation: undefined
   }
+  appendToBuffer = c => {
+    this.setState(({ buffer }) => ({ buffer: buffer === "0" ? c : buffer + c }))
+  }
+  clearBuffer = () => {
+    this.setState(() => ({ buffer: "0" }))
+  }
   render() {
     const { buffer } = this.state
     return (
       <div className="grid-container">
         <CalculatorDisplay buffer={buffer} />
-        <ClearButton />
+        <ClearButton handleClick={this.clearBuffer} />
         <div className="operations">
           {operations.map(op => (
             <OperationButton styleName="operation-button" {...op} />
@@ -43,7 +48,11 @@ class App extends Component {
           {range(0, 9)
             .reverse()
             .map(n => (
-              <NumberButton styleName="number-button" number={n} />
+              <NumberButton
+                styleName="number-button"
+                handleClick={() => this.appendToBuffer(String(n))}
+                number={n}
+              />
             ))}
         </div>
       </div>
