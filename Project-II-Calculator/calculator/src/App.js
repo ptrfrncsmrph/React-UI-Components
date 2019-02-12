@@ -13,12 +13,12 @@ import "./App.css"
 let Add, Sub, Mul, Div, Eq
 
 const Operation = (type, sym) => ({ type, sym })
-const AddOp = Operation(Add, "+")
-const SubOp = Operation(Sub, "-")
-const MulOp = Operation(Mul, "*")
-const DivOp = Operation(Div, "/")
+const AddOp = Operation(Add, "\u002B")
+const SubOp = Operation(Sub, "\u2212")
+const MulOp = Operation(Mul, "\u00D7")
+const DivOp = Operation(Div, "\u00F7")
 const EqOp = Operation(Eq, "=")
-const operations = [AddOp, SubOp, MulOp, DivOp, EqOp]
+const operations = [DivOp, MulOp, SubOp, AddOp, EqOp]
 
 const App = () => {
   return (
@@ -27,14 +27,14 @@ const App = () => {
       <ClearButton />
       <div className="operations">
         {operations.map(op => (
-          <OperationButton {...op} />
+          <OperationButton style="operation-button" {...op} />
         ))}
       </div>
       <div className="numbers">
         {range(0, 9)
           .reverse()
           .map(n => (
-            <NumberButton number={n} />
+            <NumberButton style="number-button" number={n} />
           ))}
       </div>
     </div>

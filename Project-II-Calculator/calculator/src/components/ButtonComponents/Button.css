@@ -1,13 +1,14 @@
 .clear-button {
-  background-color: red;
   grid-column: 1 / -2;
   grid-row: 2 / 3;
 }
 
 .operation-button {
-  background-color: dodgerblue;
+  background-color: #c01;
 }
 
 .number-button {
-  background-color: aquamarine;
+  font-weight: 800;
+  width: 33%;
+  flex-grow: 1;
 }

@@ -1,15 +1,17 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 4rem;
-  grid-auto-rows: 2rem;
-  /* grid-auto-flow: dense; */
+  grid-template-rows: 3.2rem;
+  grid-auto-rows: 2.4rem;
+  margin: 5vh auto;
+  border: 2px solid black;
   
-  width: 80vw;
+  width: 12rem;
 }
 
 button {
-  border: none;
+  border: 2px solid black;
+  background-color: whitesmoke;
 }
 
 .operations {
@@ -22,9 +24,4 @@ button {
   grid-row: 3 / 7;
   flex-wrap: wrap;
   flex-direction: row-reverse;
-}
-
-.numbers * {
-  width: 33%;
-  flex-grow: 1;
 }

@@ -3,7 +3,8 @@
   justify-content: flex-end;
   align-items: center;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 0.5rem;
+  font-weight: 200;
 
   grid-column: 1 / -1;
   grid-row: 1 / 2;
