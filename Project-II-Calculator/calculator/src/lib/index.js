@@ -11,4 +11,4 @@ export const add = x => y => x + y
 export const sub = x => y => x - y
 export const div = x => y => x / y
 export const mul = x => y => x * y
-export const id = x => x
+export const k = x => _ => x
